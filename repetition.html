@@ -10,20 +10,13 @@
     <script>
       var output = document.getElementById("repetition");
       var j;
-      for( j=1; j<100; j++ )
-      output.innerText += j + "\n"
-
-      function setRGB(r,g,b) {
-        var s = 'rgb(%s, %s, %s)';
-        return sprintf(s, r, g, b);
+      for( j=1; j<50; j++ ) {
+        output.innerText += j + "\n"
       }
-      function sprintf(s) {
-        for ( var i=l, l=arguments.length; i<l ; i++ ) {
-          s = s.replace(/%s/, arguments[i]);
-        }
-        return s;
+      setColor(output,j,j,j)
+      function setColor(el,r,g,b) {
+        el.style.color = 'rgb(' +r+ ',' +g+ ',' +b+ ')'
       }
-      output.style.backgroundColor = setRGB(r, g, b);
     </script>
   </body>
 </html>
