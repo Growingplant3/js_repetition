@@ -6,14 +6,14 @@
     <title>repetition</title>
   </head>
   <body>
-    <div id="repetition"></div>
+    <ul id="repetition"></ul>
     <script>
       var output = document.getElementById("repetition");
       var j;
       for( j=1; j<50; j++ ) {
         output.innerText += j + "\n"
       }
-      setColor(output,j,j,j)
+      setColor(output,2*j,3*j,4*j)
       function setColor(el,r,g,b) {
         el.style.color = 'rgb(' +r+ ',' +g+ ',' +b+ ')'
       }
