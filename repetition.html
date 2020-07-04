@@ -9,10 +9,21 @@
     <div id="repetition"></div>
     <script>
       var output = document.getElementById("repetition");
-      var i;
-      for( i=1; i<100; i++ )
-      output.innerText += i + "\n"
-      output.style.color = "rgb(${i},${i},${i})";
+      var j;
+      for( j=1; j<100; j++ )
+      output.innerText += j + "\n"
+
+      function setRGB(r,g,b) {
+        var s = 'rgb(%s, %s, %s)';
+        return sprintf(s, r, g, b);
+      }
+      function sprintf(s) {
+        for ( var i=l, l=arguments.length; i<l ; i++ ) {
+          s = s.replace(/%s/, arguments[i]);
+        }
+        return s;
+      }
+      output.style.backgroundColor = setRGB(r, g, b);
     </script>
   </body>
 </html>
